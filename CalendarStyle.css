@@ -13,7 +13,7 @@ body {
 .month {
     padding: 70px 25px;
     width: 100%;
-    background: #1abc9c;
+    background: #90AFC5;
     text-align: center;
 }
 
@@ -70,7 +70,7 @@ body {
 
 .days li .active {
     padding: 5px;
-    background: #1abc9c;
+    background: #90AFC5;
     color: white !important
 }
 
@@ -97,7 +97,26 @@ body {
     }
 }
 
-#navbar {
+
+.navbar {
     background-color: #2A3132;
+    color: #763626;
     text-align: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 40px; /* Increased height */
+    margin: 0 auto;
+    padding: 30px; /* Increased padding */
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.menuItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
