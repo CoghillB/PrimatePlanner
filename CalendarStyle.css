@@ -1,122 +1,55 @@
-* {
+/* CalendarStyle.css */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+}
+
+.calendar .header {
+    font-weight: bold;
+    text-align: center;
+}
+
+.calendar .date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    height: 100px; /* Ensure square cells */
     box-sizing: border-box;
 }
 
-ul {
-    list-style-type: none;
+.calendar .date-number {
+    font-weight: bold;
 }
 
-body {
-    font-family: Verdana, sans-serif;
+.calendar .events {
+    text-align: center;
+    margin-top: 5px;
 }
 
-.month {
-    padding: 70px 25px;
+.calendar .date button {
     width: 100%;
-    background: #90AFC5;
-    text-align: center;
+    background: none;
+    border: none;
+    padding: 10px;
 }
 
-.month ul {
-    margin: 0;
-    padding: 0;
+.calendar .date button:hover {
+    background-color: #f0f0f0;
 }
 
-.month ul li {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-.month .prev {
-    float: left;
-    padding-top: 10px;
-}
-
-.month .next {
-    float: right;
-    padding-top: 10px;
-}
-
-.weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color: #ddd;
-}
-
-.weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: #666;
-    text-align: center;
-}
-
-.days {
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
-}
-
-.days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 12px;
-    color: #777;
-}
-
-.days li .active {
-    padding: 5px;
-    background: #90AFC5;
-    color: white !important
-}
-
-/* Add media queries for smaller screens */
-@media screen and (max-width: 720px) {
-    .weekdays li, .days li {
-        width: 13.1%;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .weekdays li, .days li {
-        width: 12.5%;
-    }
-
-    .days li .active {
-        padding: 2px;
-    }
-}
-
-@media screen and (max-width: 290px) {
-    .weekdays li, .days li {
-        width: 12.2%;
-    }
-}
-
-
-.navbar {
-    background-color: #2A3132;
-    color: #763626;
-    text-align: center;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
+.month-container {
     display: flex;
-    height: 40px; /* Increased height */
-    margin: 0 auto;
-    padding: 30px; /* Increased padding */
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-
-.menuItems {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+}
+
+.month-title {
+    flex-grow: 1;
+    text-align: center;
 }
